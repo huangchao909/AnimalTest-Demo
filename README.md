@@ -1,19 +1,20 @@
 # AnimalTest-Demo
 Just another repository
-public class Animal{
+public class Mouse{
 	private String name;
 	private int id;
-	public Animal(String myname, String myid){
-		//初始化属性值
+	public Mouse(String myname, int myid){
+		name = myname;
+		id = myid;
 	}
 	public void eat(){
-		//吃东西的具体实现方法
+		system.out.println(name+"在吃东西");
 	}
-	public void sleeep(){
-		//睡觉的具体实现方法
+	public void sleep(){
+		system.out.println(name+"正在睡觉");
 	}
-}
-
-public class Mouse extends Animal{
+	public void introduction(){
+		system.out.println("大家好，我是"+name+“.”);
+	}
 
 }
