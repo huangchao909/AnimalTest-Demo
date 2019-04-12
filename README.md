@@ -1,15 +1,26 @@
-# AnimalTest-Demo
-//这是一个关于implements关键字接口继承的实例//
+//通过super关键字来实现对父类成员的访问，用来引用当前对象的父类//
+class Animal{
+	void eat(){
+	system.out.println("animal : eat");
 
-public interface A{
-	public void eat();
-	public void sleep();
+	}
 }
 
-public interface B{
-	public void show();
+class Dog extends Animal{
+	void eat(){
+	system.out.println("dog : eat");
+	}
+	void eatTest(){
+	this.eat(); //this 调用自己的方法
+	super.eat();//super 调用父类方法
+	}
 }
 
-public class C implements A,B{
-
+public class Test{
+	public static void main(String[] args){
+	Animal a = new Animal();
+	a.eat();
+	Dog.d = new Dog();
+	d.eatTest();
+	}
 }
